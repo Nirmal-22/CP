@@ -1,0 +1,13 @@
+int Solution::mice(vector<int> &A, vector<int> &B) 
+{
+    sort(A.begin(),A.end());
+    sort(B.begin(),B.end());
+    
+    int mx=abs(A[0]-B[0]);
+    for(int i=0;i<A.size();i++)
+    {
+        mx= max(mx,abs(A[i]-B[i]));
+    }
+    
+    return mx;
+}
