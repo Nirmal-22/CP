@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tListNode* reverseList(ListNode* head) {\n\t\tListNode* prev = NULL;\n\t\tListNode* n;\n\t\twhile(head){\n\t\t\tn = head->next;\n\t\t\thead->next = prev;\n\t\t\tprev = head;\n\t\t\thead = n;\n\t\t}\n\t\treturn prev;\n\t}\n};

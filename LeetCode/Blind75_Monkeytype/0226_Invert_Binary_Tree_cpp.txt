@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tTreeNode* invertTree(TreeNode* root) {\n\t\tif(!root) return nullptr;\n\t\tTreeNode* leftSub = invertTree(root->left);\n\t\tTreeNode* rightSub = invertTree(root->right);\n\t\troot->left = rightSub;\n\t\troot->right = leftSub;\n\t\treturn root;\n\t}\n};

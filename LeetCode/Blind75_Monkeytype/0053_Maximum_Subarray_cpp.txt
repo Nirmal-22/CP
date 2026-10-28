@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint maxSubArray(vector<int>& nums) {\n\t\tint n=nums.size();\n\t\tint s=0;\n\t\tint max=nums[0];\n\t\tfor(int i=0;i<n;i++)\n\t\t{\n\t\t\tif(s<0 && nums[i]>s)\n\t\t\ts=0;\n\t\t\ts+=nums[i];\n\t\t\tif(s>max)\n\t\t\tmax=s;\n\t\t}\n\t\treturn max;\n\t}\n};

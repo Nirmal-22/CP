@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tvector<int> twoSum(vector<int>& nums, int target) {\n\t\tunordered_map<int, int> mp;\n\t\tfor(int i=0; i<nums.size(); i++){\n\t\t\tif(mp.find(target - nums[i])!=mp.end()){\n\t\t\t\treturn {mp[target - nums[i]], i};\n\t\t\t}\n\t\t\tif(mp.find(nums[i])==mp.end()) mp[nums[i]]=i;\n\t\t}\n\t\treturn {};\n\t}\n};

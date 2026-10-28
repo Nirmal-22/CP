@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tbool hasCycle(ListNode *head) {\n\t\tif(!head) return false;\n\t\tListNode *slow = head, *fast=head;\n\t\twhile(fast && fast->next){\n\t\t\tslow = slow->next;\n\t\t\tfast = fast->next->next;\n\t\t\tif(slow == fast) return true;\n\t\t}\n\t\treturn false;\n\t}\n};

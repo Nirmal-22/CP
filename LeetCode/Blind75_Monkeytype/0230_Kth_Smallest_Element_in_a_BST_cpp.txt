@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint kthSmallest(TreeNode* root, int k) {\n\t\tstack<TreeNode*> st;\n\t\tTreeNode* cur = root;\n\t\twhile(true){\n\t\t\twhile(cur){\n\t\t\t\tst.push(cur);\n\t\t\t\tcur = cur->left;\n\t\t\t}\n\t\t\tcur = st.top(); st.pop();\n\t\t\tif(--k == 0) return cur->val;\n\t\t\tcur = cur->right;\n\t\t}\n\t}\n};

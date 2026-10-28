@@ -1,0 +1,1 @@
+class Solution\n{\npublic:\n\tint hammingWeight(uint32_t n)\n\t{\n\t\tint c=0;\n\t\twhile(n>0)\n\t\t{\n\t\t\tif(n&1==1) c++;\n\t\t\tn=n>>1;\n\t\t}\n\t\treturn c;\n\t}\n};

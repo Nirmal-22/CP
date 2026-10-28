@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint maxDepth(TreeNode* root) {\n\t\tif(!root) return 0;\n\t\treturn 1+max(maxDepth(root->left), maxDepth(root->right));\n\t}\n};

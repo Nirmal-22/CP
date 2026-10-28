@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint maxArea(vector<int>& height) {\n\t\tint i = 0;\n\t\tint j = height.size() - 1;\n\t\tint ans = 0;\n\t\twhile (i < j)\n\t\t{\n\t\t\tans = max(ans, min(height[i], height[j]) * (j - i));\n\t\t\tif (height[i] < height[j])\n\t\t\t\ti++;\n\t\t\telse\n\t\t\t\tj--;\n\t\t}\n\t\treturn ans;\n\t}\n};

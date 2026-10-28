@@ -1,0 +1,1 @@
+class Solution:\n\tdef twoSum(self, nums: List[int], target: int) -> List[int]:\n\t\tfor i,x in enumerate(nums):\n\t\t\tfor j,y in enumerate(nums[i+1:]):\n\t\t\t\tif x+y == target:\n\t\t\t\t\treturn [i,i+1+j]

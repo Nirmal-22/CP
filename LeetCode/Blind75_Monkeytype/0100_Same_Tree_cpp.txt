@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tbool isSameTree(TreeNode* p, TreeNode* q) {\n\t\tif(!p && !q) return true;\n\t\tif(!p || !q) return false;\n\t\tif(p->val != q->val) return false;\n\t\treturn isSameTree(p->left, q->left) && isSameTree(p->right, q->right);\n\t}\n};

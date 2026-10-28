@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint lengthOfLIS(vector<int>& nums) {\n\t\tvector<int> tails;\n\t\tfor(int x:nums){\n\t\t\tauto it = lower_bound(tails.begin(), tails.end(), x);\n\t\t\tif(it == tails.end())\n\t\t\t\ttails.push_back(x);\n\t\t\telse\n\t\t\t\t*it = x;\n\t\t}\n\t\treturn tails.size();\n\t}\n};

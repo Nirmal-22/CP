@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tbool isPalindrome(string s) {\n\t\tint i=0, j=s.size()-1;\n\t\twhile(i<j)\n\t\t{\n\t\t\twhile(i<j && !isalnum(s[i])) i++;\n\t\t\twhile(i<j && !isalnum(s[j])) j--;\n\t\t\tif(tolower(s[i]) != tolower(s[j])) return false;\n\t\t\ti++; j--;\n\t\t}\n\t\treturn true;\n\t}\n};

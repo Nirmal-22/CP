@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint missingNumber(vector<int>& nums) {\n\t\tint n= nums.size();\n\t\tint res = n;\n\t\tfor(int i=0;i<n;i++){\n\t\t\tres ^= i ^ nums[i];\n\t\t}\n\t\treturn res;\n\t}\n};

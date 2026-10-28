@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tuint32_t reverseBits(uint32_t n) {\n\t\tuint32_t result=0;\n\t\tfor(int i=0;i<32;i++){\n\t\t\tresult <<=1;\n\t\t\tresult |= (n&1);\n\t\t\tn>>=1;\n\t\t}\n\t\treturn result;\n\t}\n};

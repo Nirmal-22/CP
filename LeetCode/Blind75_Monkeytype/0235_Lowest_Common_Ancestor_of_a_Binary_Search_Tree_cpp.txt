@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tTreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {\n\t\tif (root->val > p->val && root->val > q->val)\n\t\t\treturn lowestCommonAncestor(root->left, p, q);\n\t\tif (root->val < p->val && root->val < q->val)\n\t\t\treturn lowestCommonAncestor(root->right, p, q);\n\t\treturn root;\n\t}\n};

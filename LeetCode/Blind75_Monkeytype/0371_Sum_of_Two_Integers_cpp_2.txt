@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint getSum(int A, int B) {\n\t\twhile (B != 0) {\n\t\tint carry = A & B;\n\t\tA = A ^ B;\n\t\tB = carry << 1;\n\t}\n\t\treturn A;\n\t}\n};

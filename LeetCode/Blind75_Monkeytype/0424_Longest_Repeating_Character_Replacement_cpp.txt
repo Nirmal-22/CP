@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint characterReplacement(string s, int k) {\n\t\tvector<int> count(26,0);\n\t\tint maxf=0, left=0, res=0;\n\t\tfor(int right=0; right<s.size(); right++){\n\t\t\tmaxf = max(maxf, ++count[s[right]-'A']);\n\t\t\twhile((right-left+1)-maxf > k)\n\t\t\t\t--count[s[left++]-'A'];\n\t\t\tres = max(res, right-left+1);\n\t\t}\n\t\treturn res;\n\t}\n};

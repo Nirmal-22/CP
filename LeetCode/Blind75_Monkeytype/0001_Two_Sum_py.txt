@@ -1,0 +1,1 @@
+class Solution:\n\tdef twoSum(self, nums: List[int], target: int) -> List[int]:\n\t\tdict = {}\n\t\t# ans = []\n\t\tfor i,j in enumerate(nums):\n\t\t\tif target-j in dict:\n\t\t\t\t# ans = [dict[target-j] , i]\n\t\t\t\treturn [dict[target-j] , i]\n\t\t\t\t# break\n\t\t\tdict[j] = i\n\t\t# return ans

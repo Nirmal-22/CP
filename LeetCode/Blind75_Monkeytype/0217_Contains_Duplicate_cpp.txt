@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tbool containsDuplicate(vector<int>& nums)\n\t{\n\t\tunordered_map<int,int> mp;\n\t\tfor(auto x:nums)\n\t\t{\n\t\t\tif(mp[x]==1) return true;\n\t\t\telse\n\t\t\t\tmp[x]=1;\n\t\t}\n\t\treturn false;\n\t}\n};

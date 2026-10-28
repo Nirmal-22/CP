@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tbool wordBreak(string s, vector<string>& wd) {\n\t\tunordered_set<string> dict(wd.begin(),wd.end());\n\t\tint n= s.size();\n\t\tvector<char> dp(n+1, 0);\n\t\tdp[0] = 1;\n\t\tfor(int i=1;i<=n;i++)\n\t\t{\n\t\t\tfor(int j=i-1;j>=0 && !dp[i]; j--){\n\t\t\t\tif(dp[j] && dict.count(s.substr(j, i-j))) dp[i]=1;\n\t\t\t}\n\t\t}\n\t\treturn dp[n];\n\t}\n};

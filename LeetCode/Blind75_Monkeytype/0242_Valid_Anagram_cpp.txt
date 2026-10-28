@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tbool isAnagram(string s, string t) {\n\t\tif(s.size() != t.size()) return false;\n\t\tint freq[26] = {0};\n\t\tfor(int i=0; i<s.size();i++){\n\t\t\t++freq[s[i] - 'a'];\n\t\t\t--freq[t[i] - 'a'];\n\t\t}\n\t\tfor(int c: freq){\n\t\t\tif(c!=0) return false;\n\t\t}\n\t\treturn true;\n\t}\n};

@@ -1,0 +1,1 @@
+class Solution {\npublic:\n\tint maxPathSum(TreeNode* root) {\n\t\tint mx=INT_MIN;\n\t\tfunction<int(TreeNode*)> dfs = [&](TreeNode* node) -> int {\n\t\t\tif(!node) return 0;\n\t\t\tint l = max(0, dfs(node->left));\n\t\t\tint r = max(0, dfs(node->right));\n\t\t\tmx = max(mx, node->val + l + r);\n\t\t\treturn node->val +  max(l,r);\n\t\t};\n\t\tdfs(root);\n\t\treturn mx;\n\t}\n};
